@@ -12,15 +12,39 @@ const doctors = [
     id: 1,
     name: 'Dr. vishnu Kumar Prajapati',
     schedule: {
-      days: ['Monday', 'Wednesday', 'Friday'],
+      days: ['Monday', "Tuesday",'Wednesday', "Thursday",'Friday',"Saturday"],
       maxPatientsPerDay: 10,
     },
   },
-  //We can Add more doctor data as needed
+  {
+    id: 2,
+    name: 'Dr. Ramesh Kumar',
+    schedule: {
+      days: ['Monday', "Tuesday",'Wednesday', "Thursday",'Friday',"Saturday"],
+      maxPatientsPerDay: 10,
+    },
+  },
+  {
+    id: 3,
+    name: 'Dr. Manoj Sinha',
+    schedule: {
+      days: ['Monday', "Tuesday",'Wednesday', "Thursday",'Friday',"Saturday"],
+      maxPatientsPerDay: 10,
+    },
+  },
+  {
+    id: 4,
+    name: 'Dr. Sanjay Prajapati',
+    schedule: {
+      days: ['Monday', "Tuesday",'Wednesday', "Thursday",'Friday',"Saturday"],
+      maxPatientsPerDay: 10,
+    },
+  },
+
 ];
 
 const appointments = [];
- 
+
 app.get('/', (req, res) => {
   res.send("Hello Doctor API ");
 });
@@ -50,7 +74,8 @@ app.post('/appointments', (req, res) => {
     return res.status(404).json({ message: 'Doctor not found' });
   }
 
-  const today = new Date().toLocaleDateString('en-US', { weekday: 'Monday' }); // Get the current day
+  const today = new Date().toLocaleDateString(undefined,{ weekday: 'long'}); 
+  // console.log(today);
   if (!doctor.schedule.days.includes(today)) {
     return res.status(400).json({ message: 'Doctor is not available today' });
   }
