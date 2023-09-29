@@ -36,4 +36,10 @@
 
     localhost:3000/appointments
 
+## Code 
+
+
+https://github.com/vishnu95075/doctorApi/assets/75454756/bfb8b9cc-fa9e-4b91-af14-7ecbe9641edb
+
+
 
