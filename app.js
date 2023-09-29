@@ -10,7 +10,7 @@ app.use(cors());
 const doctors = [
   {
     id: 1,
-    name: 'Dr. John Doe',
+    name: 'Dr. vishnu Kumar Prajapati',
     schedule: {
       days: ['Monday', 'Wednesday', 'Friday'],
       maxPatientsPerDay: 10,
@@ -22,7 +22,7 @@ const doctors = [
 const appointments = [];
  
 app.get('/', (req, res) => {
-  res.send("Hello ");
+  res.send("Hello Doctor API ");
 });
 
 // Route to list all doctors
