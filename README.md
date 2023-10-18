@@ -1,4 +1,4 @@
-# doctorApi for Intern
+# doctorApi for Internship
 
 
 ## For Cloud Host API
